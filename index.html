@@ -17,7 +17,7 @@
         var R = 8.314;
         var P1 = 1.5;
         var P3 = 0.75;
-        var gamma=1.667;
+        var gamma=1.4;
 
         function dummy(){
             var datapoints1 = [];
@@ -43,13 +43,13 @@
             }
 
             // cd 3rd
-            for(i=v4*100; i<=v3*100; i++){
+            for(i=v4*150; i<=v3*100; i++){
                 datapoints3.push({ x: i/100, y: (P3*v3)/i*100 });
             }
 
 // da 4th
 //             for(m=2; m<=Math.pow(T1/T2, 1/(gamma-1))*v1; m++){
-            for(m=v1*100; m<=v4*100; m++){
+            for(m=v1*100; m<=v4*150;m++){
                 datapoints4.push({x: m/100, y: P4*Math.pow((v4/m*100), gamma)});
             }
 
